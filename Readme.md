@@ -1,17 +1,13 @@
-Automated analysis of protein mass loss through intensity changes in movies collected from STEM – a Jython approach
 
-1. 	Perform stack alignment and save it to .tiff.
-a.	To install and learn about cvTemplate_Matching/stack alignment, strictly follow instructions here: https://sites.google.com/site/qingzongtseng/template-matching-ij-plugin 
-Align slices in stack – chose matching method: Normalized correlation coefficient. Search area is set at 0. 
-b.	Plugin – registration – Linear stack alignment with SIFT (Scale-Invariant Feature Transform)
+Streamlined Analysis of Protein Mass Loss via Intensity Changes in STEM Movies Using Jython
 
+Align and Save Image Stacks: First, to align image stacks, install and learn about the cvTemplate_Matching/stack alignment by following the instructions at this [link]([https://www.google.com](https://sites.google.com/site/qingzongtseng/template-matching-ij-plugin))
 
-2.	Use the multi-point tool in ImageJ to select the center of protein particles. Try to center at high magnification and position it as correctly as possible.
+Selecting Protein Particles: Utilize ImageJ's multi-point tool to accurately identify the centers of protein particles.
 
-3.	Create the pixel coordination list – under Analyze menu, select Set Measurements. Click Center of mass, and set Decimal places (0-9) to 0. In Result options, deselect Save row/column headers; click OK. This will generate a list of X,Y coordinates of the selected pixels (column 1(X) and 2(Y)).  
+Generating Pixel Coordinates: Under the Analyze menu, select Set Measurements, click on Center of mass, and set Decimal places to 0. Uncheck Save row/column headers in the Result options. This action produces a list of X,Y coordinates for the selected pixels.
 
-4.	Save as .txt file to the directory where is image is located. The Jython script will use this file directory.
+Saving Coordinates: Export the coordinates list as a .txt file to the same directory as the image. The Jython script will reference this directory.
 
-5. Select 'Language' in ImageJ scripts and chose Jython. Run the script 'Pixel_Intensity.py', and add outer radius and inner radius of the protein ring (in pixels). If the protein is circular, put inner raidus value '0'.
-
-6. To mark the selected positions, run script 'Marking_Sample_Location.py' which plots the selected sample positions.     
+Running Jython Scripts: In ImageJ, set the scripting language to Jython. Execute the 'Pixel_Intensity.py' script, inputting the outer and inner radii (in pixels) of the protein ring; use '0' for circular proteins. To visually mark selected positions, run the 'Marking_Sample_Location.py' script, which displays the chosen sample locations.   
+ 
