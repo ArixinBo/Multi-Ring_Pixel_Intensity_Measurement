@@ -20,7 +20,7 @@ plt.show()
 
 
 # Define file paths (kept unchanged as per your request)
-input_file_path = 'C:/Users/'
+input_file_path = 'C:/Users/'   #This is the file path for the saved coordinates.
 
 
 # Read the coordinates
@@ -39,14 +39,14 @@ from PIL import Image
 
 # Assuming you've already defined the 'draw_rings_with_cross' function as given in the previous response
 
-# Load your image,  # Make sure to update the path.
-image_path = r'C:\Users\' 
+# Load your image, and make sure to update the path.
+image_path = r'C:\Users\'              #This is path for the image, on which the coordinates would be drawn. 
 image = Image.open(image_path)
 
 # As above, coordinates is a list of tuples, each representing the (x, y) coordinates of the ring center
 centers = coordinates # coordinates from the saved result file. 
 
-#Put this numbers accordingly
+#Put this numbers accordingly, to match your actual measurement. 
 outer_diameter = 30 # unit is in pixel
 inner_diameter = 15 # unit is in pixel
 
