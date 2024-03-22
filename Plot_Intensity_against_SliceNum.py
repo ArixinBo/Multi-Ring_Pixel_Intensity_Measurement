@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from io import StringIO
 
-# Loading the coordinate file
+# Use the Jython generated mearuement file directory here. 
 file_path = ''  
 
 # Read the data
