@@ -3,7 +3,7 @@ Streamlined Analysis of Sample Mass Loss via Intensity Changes Using Jython
 
 Align and Save Image Stacks: First, to align image stacks, install and learn about the cvTemplate_Matching/stack alignment by following the instructions at this ([link](https://sites.google.com/site/qingzongtseng/template-matching-ij-plugin))
 
-Selecting Samples of Interest: Utilize ImageJ's multi-point tool to accurately identify the centers of protein particles.
+Selecting Samples of Interest: Use ImageJ's multi-point tool to accurately identify the centers of protein particles.
 
 Generating Pixel Coordinates: Under the Analyze menu, select Set Measurements, click on Center of mass, and set Decimal places to 0. Uncheck Save row/column headers in the Result options. This action produces a list of X,Y coordinates for the selected pixels.
 
