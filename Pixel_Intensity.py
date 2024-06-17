@@ -35,7 +35,8 @@ def measureIntensityInRing(imp, x, y, outer_radius, inner_radius):
     return area, mean_intensity
 
 # Define file paths
-input_file_path = r'C:\Users\'  # Update this with the actual path to your coordinates file
+# Update 'input_file_path' with the actual path to your coordinates file
+input_file_path = r'C:\Users\barx8\OneDrive\02 Bruker\Experimental\Data analysis\Sercan\Apo_A2\mrc\Apo_A2_STEM 210 kx 0007 HAADF_Aligned_coord.txt'   
 output_file_path = os.path.splitext(input_file_path)[0] + '_measurements.txt'
 
 # Read the coordinates from the file
@@ -44,7 +45,7 @@ with open(input_file_path, 'r') as file:
     for line in file:
         parts = line.strip().split('\t')
         if len(parts) >= 2:  # Adjust according to your file
-            coordinates.append((int(parts[2]), int(parts[3])))  # # ImageJ generate X, and Y pixel coordinates at column 2 , 3. Adjust these numbers accordingly.
+            coordinates.append((int(parts[1]), int(parts[2])))  # # ImageJ generate X, and Y pixel coordinates at column 2 , 3. Adjust these numbers accordingly.
 
 # Load the image or movie
 imp = WindowManager.getCurrentImage()
@@ -73,3 +74,5 @@ with open(output_file_path, 'w') as outfile:
             outfile.write("{}\t{}\t{}\t{}\t{}\t{}\n".format(slice, index, x, y, area, mean_intensity))
 
 print("Measurements saved to: {}".format(output_file_path))
+IJ.selectWindow("Results")
+IJ.run("Close")
